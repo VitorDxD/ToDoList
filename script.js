@@ -47,9 +47,6 @@ function addTarefa(){
     
 }
 
-elementoAdd.setAttribute('onclick','addTarefa()')
-
-
 function deletarTarefa(pos){
     tarefas.splice(pos, 1)
     mostrarTarefa()

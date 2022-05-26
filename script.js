@@ -1,6 +1,5 @@
 const elementoTexto = document.getElementById("Texto")
 const elementoAdd = document.getElementById("Add")
-const elementoDelete = document.getElementById("Delete")
 const elementoLista = document.querySelector("ul")
 
     if (localStorage.getItem("arraySalva") === ""){
@@ -33,11 +32,11 @@ function mostrarTarefa(){
 
 
 function addTarefa(){
-    if (elementoTexto.value != ''){
+    if (elementoTexto.value != ""){
 
         const textoTarefa = elementoTexto.value
         tarefas.push(textoTarefa)
-        elementoTexto.value = ''
+        elementoTexto.value = ""
 
         mostrarTarefa()
         localStorage.setItem("arraySalva", JSON.stringify(tarefas))
@@ -55,6 +54,6 @@ function deletarTarefa(pos){
 
 function limpar(){
     localStorage.setItem("arraySalva", "")
-    tarefas = ""
+    tarefas = []
     mostrarTarefa()
 }
